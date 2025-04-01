@@ -5,6 +5,7 @@ body {
     color: white;
     margin: 0;
     padding: 0;
+    transition: background-color 0.5s, color 0.5s;
 }
 
 header {
@@ -13,30 +14,36 @@ header {
     font-size: 1.5em;
 }
 
-.selector {
-    margin: 20px;
-}
-
-select, button {
-    padding: 10px;
-    font-size: 1em;
-    margin-top: 10px;
-}
-
 button {
-    background-color: #ff6600;
-    border: none;
+    padding: 10px;
+    margin: 10px;
     cursor: pointer;
-    color: white;
 }
 
-button:hover {
-    background-color: #e65c00;
+#moviePoster {
+    max-width: 300px;
+    display: none;
 }
 
-#results {
-    margin-top: 20px;
-    padding: 15px;
-    border-top: 2px solid #ff6600;
-    font-size: 1.2em;
+#movieTrailer {
+    width: 500px;
+    height: 300px;
+    display: none;
+}
+
+textarea, input {
+    width: 80%;
+    padding: 10px;
+    margin: 5px;
+}
+
+#reviewList {
+    list-style: none;
+    padding: 0;
+}
+
+/* Light Mode */
+.light-mode {
+    background-color: white;
+    color: black;
 }
