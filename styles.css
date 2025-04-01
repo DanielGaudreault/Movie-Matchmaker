@@ -26,23 +26,11 @@ button {
 }
 
 #movieTrailer {
-    width: 500px;
-    height: 300px;
+    width: 640px;
+    height: 360px;
     display: none;
+    margin: 20px auto; /* Centers the trailer */
 }
-
-textarea, input {
-    width: 80%;
-    padding: 10px;
-    margin: 5px;
-}
-
-#reviewList {
-    list-style: none;
-    padding: 0;
-}
-
-/* Light Mode */
 .light-mode {
     background-color: white;
     color: black;
