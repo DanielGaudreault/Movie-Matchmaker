@@ -18,13 +18,6 @@ const movieData = {
         { title: "The Green Mile", poster: "green_mile.jpg", trailer: "https://www.youtube.com/embed/Ki4haFrqSrw" },
         { title: "The Pursuit of Happyness", poster: "pursuit_of_happyness.jpg", trailer: "https://www.youtube.com/embed/DMOBlEcRuw8" },
         { title: "Marley & Me", poster: "marley_me.jpg", trailer: "https://www.youtube.com/embed/AG7TpkYr5G8" }
-    ],
-    excited: [
-        { title: "Mad Max: Fury Road", poster: "mad_max.jpg", trailer: "https://www.youtube.com/embed/hEJnMQG9ev8" },
-        { title: "The Dark Knight", poster: "dark_knight.jpg", trailer: "https://www.youtube.com/embed/EXeTwQWrcwY" },
-        { title: "Gladiator", poster: "gladiator.jpg", trailer: "https://www.youtube.com/embed/owK1qxDselE" },
-        { title: "John Wick", poster: "john_wick.jpg", trailer: "https://www.youtube.com/embed/2AUmvWm5ZDQ" },
-        { title: "Die Hard", poster: "die_hard.jpg", trailer: "https://www.youtube.com/embed/gYWvwkXreaI" }
     ]
 };
 
@@ -45,24 +38,4 @@ function recommendMovie() {
         document.getElementById('moviePoster').style.display = "none";
         document.getElementById('movieTrailer').style.display = "none";
     }
-}
-
-// User Reviews and Ratings System
-function submitReview() {
-    const reviewText = document.getElementById('userReview').value;
-    const rating = document.getElementById('userRating').value;
-
-    if (!reviewText || rating < 1 || rating > 10) {
-        alert("Please enter a review and a rating between 1 and 10.");
-        return;
-    }
-
-    const reviewList = document.getElementById('reviewList');
-    const newReview = document.createElement("li");
-    newReview.textContent = `⭐ ${rating}/10 - ${reviewText}`;
-    reviewList.appendChild(newReview);
-
-    // Clear inputs
-    document.getElementById('userReview').value = "";
-    document.getElementById('userRating').value = "";
 }
